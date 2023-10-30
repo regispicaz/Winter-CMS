@@ -1,0 +1,41 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    status:
+        label: Ativo
+        type: switch
+        searchable: true
+        sortable: true
+    title:
+        label: Título
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: Slug
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Descrição
+        type: text
+        searchable: true
+        sortable: true
+    brand:
+        label: Marca
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'Criado em:'
+        type: datetime
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'Atualizado em:'
+        type: datetime
+        searchable: true
+        sortable: true

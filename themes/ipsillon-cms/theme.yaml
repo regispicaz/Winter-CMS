@@ -1,0 +1,9 @@
+name: 'Ipsillon CMS'
+description: 'Custom theme generated for http://localhost:8000/'
+author: 'Régis Picáz'
+homepage: 'http://localhost:8000/'
+code: ipsillon-cms
+form:
+    fields:
+        googleanalytics_id:
+            label: 'Google Analytics ID'

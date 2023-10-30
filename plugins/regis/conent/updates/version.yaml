@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table regis_conent_produtos'
+    - builder_table_create_regis_conent_produtos.php

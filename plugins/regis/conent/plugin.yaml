@@ -1,0 +1,11 @@
+plugin:
+    name: 'regis.conent::lang.plugin.name'
+    description: 'regis.conent::lang.plugin.description'
+    author: Régis
+    icon: oc-icon-book
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Produtos
+        url: regis/conent/produto
+        icon: icon-cubes

@@ -1,0 +1,31 @@
+fields:
+    status:
+        label: Ativo
+        span: full
+        default: 1
+        type: switch
+    title:
+        label: Título
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        readOnly: 1
+        preset:
+            field: title
+            type: slug
+        type: text
+        comment: 'Não usar caracteres especiais'
+    brand:
+        label: Marca
+        span: auto
+        required: 1
+        type: text
+    description:
+        label: Descrição
+        size: ''
+        span: full
+        required: 1
+        type: richeditor

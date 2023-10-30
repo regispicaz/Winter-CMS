@@ -1,0 +1,10 @@
+name: Produto
+form: $/regis/conent/models/produto/fields.yaml
+modelClass: Regis\Conent\Models\Produto
+defaultRedirect: regis/conent/produto
+create:
+    redirect: 'regis/conent/produto/update/:id'
+    redirectClose: regis/conent/produto
+update:
+    redirect: regis/conent/produto
+    redirectClose: regis/conent/produto

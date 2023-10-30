@@ -1,0 +1,25 @@
+title = "Produto"
+url = "/produto/:slug"
+layout = "ipsillon-theme"
+description = "Página de Produtos"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Regis\Conent\Models\Produto"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Registro não encontrado"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+    {{ record.title }}
+    </br>
+    {{ recotd.description }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

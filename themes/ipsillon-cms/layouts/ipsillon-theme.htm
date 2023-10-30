@@ -1,0 +1,40 @@
+description = "Tema Padão Ipsillon"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ipsillon CMS - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Régis Picáz">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Winter CMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body class="m-2">
+
+        <!-- Header -->
+        {% partial "header" %}
+
+        <!-- Content -->
+        <section id="layout-content" class="my-2 bg-orange-300 p-2 rounded-lg shadow text-zinc-500">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        {%partial"footer"%}
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        {% snowboard all %}
+        {% scripts %}
+
+    </body>
+</html>
