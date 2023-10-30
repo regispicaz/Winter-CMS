@@ -5,10 +5,11 @@ use Model;
 /**
  * Model
  */
+
 class Produto extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use \October\Rain\Database\Traits\Sortable;
+    use \Winter\Storm\Database\Traits\Sortable;
 
 
     /**
@@ -20,5 +21,19 @@ class Produto extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    public function scopeActive($query){
+
+        return $query->where('status', true);
+
+    }
+
+    public $attachOne = [
+        'image' => 'System\Models\File'
+    ];
+
+    public $attachMany = [
+        'galery' => 'System\Models\File'
     ];
 }

@@ -19,7 +19,17 @@ notFoundMessage = "Registro não encontrado"
     {{ attribute(record, displayColumn) }}
     {{ record.title }}
     </br>
-    {{ recotd.description }}
+    {{ record.description }}
+    </br>
+    <img class="w-52 rounded-lg" src="{{ record.image.path }}" alt="{{ record.image.path }}">
 {% else %}
     {{ notFoundMessage }}
 {% endif %}
+
+<div class="imageContainer flex gap-2">
+    {% for galeryImage in record.galery %}
+        <img class="w-52 rounded-lg" src="{{ galeryImage.path }}" alt="{{ galeryImage.path }}">
+    {% endfor %}
+</div>
+
+
