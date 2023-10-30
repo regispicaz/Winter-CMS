@@ -1,4 +1,5 @@
 title: Produto
 modelClass: Regis\Conent\Models\Produto
+nameFrom: title
 toolbar:
     buttons: reorder_toolbar

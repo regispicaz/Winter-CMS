@@ -1,13 +1,22 @@
 description = "Cabeçalho"
 ==
+
+<?php
+function onStart()
+{
+    $this['backendUrl'] = Backend::url('http://localhost:8000/backend/');
+}
+?>
+
 <header id="layout-header">
-    <nav class="flex justify-between my-2 bg-gray-400 p-2 text-gray-50 rounded-lg shadow">
-        <h1><a href="#">Site do Fulano</a></h1>
-        <ul class='flex gap-2'>
-            <li class="{% if this.page.id == 'home' %}bg-violet-600 rounded shadow-lg{% endif %} hover:text-violet-600 rounded"><a href="{{ 'home'|page }}">Home</a></li>
-            <li class="{% if this.page.id == 'about' %}bg-violet-600 rounded shadow-lg{% endif %} hover:text-violet-600 rounded"><a href="{{ 'about'|page }}">About</a></li>
-            <li class="{% if this.page.id == 'produtos' %}bg-violet-600 rounded shadow-lg{% endif %} hover:text-violet-600 rounded"><a href="{{ 'produtos'|page }}">Produtos</a></li>
-            <li class="{% if this.page.id == 'contact' %}bg-violet-600 rounded shadow-lg{% endif %} hover:text-violet-600 rounded"><a href="{{ 'contact'|page }}">Contact</a></li>
+    <nav class="flex justify-between my-2 bg-gray-400 p-2 text-gray-50 rounded-lg shadow my-auto">
+        <h1 class="my-auto"><a href="#">Site do Fulano</a></h1>
+        <ul class='flex gap-2 py-2 flex my-auto'>
+            <li class="{% if this.page.id == 'home' %}bg-green-300 rounded  text-gray-500{% endif %} hover:text-gray-50 rounded my-auto p-2"><a href="{{ 'home'|page }}" class="hover:border-b-4">Home</a></li>
+            <li class="{% if this.page.id == 'about' %}bg-green-300 rounded   text-gray-500{% endif %} hover:text-gray-50 rounded my-auto p-2"><a href="{{ 'about'|page }}" class="hover:border-b-4">About</a></li>
+            <li class="{% if this.page.id == 'produtos' %}bg-green-300 rounded  text-gray-500{% endif %} hover:text-gray-50 rounded my-auto p-2"><a href="{{ 'produtos'|page }}" class="hover:border-b-4">Produtos</a></li>
+            <li class="{% if this.page.id == 'contact' %}bg-green-300 rounded  text-gray-500{% endif %} hover:text-gray-50 rounded my-auto p-2"><a href="{{ 'contact'|page }}" class="hover:border-b-4">Contact</a></li>
         </ul>
+        <div class="bg-green-300 rounded border-2 boeder-violet-600 my-auto text-gray-500 p-2"><a href="{{ backendUrl }}">Sign in</a></div>
     </nav>
 </header>
